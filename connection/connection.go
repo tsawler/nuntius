@@ -12,7 +12,7 @@ type Socket interface {
 	WriteJSON(interface{}) error
 }
 
-// Connection An user connection
+// Connection A user connection
 type Connection struct {
 	sync.Mutex
 
@@ -21,7 +21,7 @@ type Connection struct {
 	CreatedAt time.Time
 }
 
-// New Create a new Subscriber
+// New Creates a new Subscriber
 func New(socketID string, s Socket) *Connection {
 	log.Infof("Creating a new Subscriber %+v", socketID)
 
